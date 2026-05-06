@@ -13,6 +13,7 @@
   align-items: center;
   text-align: center;
 }
+
 .overlay2 {
   margin: 0;
   padding: 0;
@@ -113,7 +114,7 @@ line-height: 1.6;
 background-image: url('/bb.png');
   margin: 0;
   padding: 0;
-
+padding-left: 0 ;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -164,6 +165,11 @@ background-image: url('/bb.png');
   box-sizing: border-box;
   border-radius: 0 0 20px 20px;
 }
+.linksContainer {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
 
 .logoContainer {
   display: flex;
@@ -182,15 +188,32 @@ background-image: url('/bb.png');
 /* Links - MAKE THEM SIDE BY SIDE */
 .links {
   display: flex;
-  flex-direction: row;  /* This makes them horizontal */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+   /* This makes them horizontal */
   gap: 30px;
   margin: 0;
   padding: 0;
   list-style: none;  /* Removes bullet points */
 }
-
+.overlay,.overlay2,.st,.overlay3{
+ width: 100%;
+ padding: 0;
+}
+.service1{
+  grid-template-columns: 1fr;
+  padding-left: 10px;
+}
 .links li {
-  display: inline-block;  /* Ensures horizontal layout */
+  display: inline-block;  
+/* Ensures horizontal layout */
+}
+
+.linksLi{
+  font-weight: bolder;
+  color: rgb(140, 18, 40);
+  font-size: clamp(0.8rem, 2.0vw, 9999rem);
 }
 
 .links a {
@@ -388,9 +411,19 @@ margin-left: 72px;
 /* Mobile responsive */
 @media (max-width: 768px) {
   .nav {
-    flex-direction: column;
-    padding: 15px 20px;
-    gap: 15px;
+    flex-wrap: wrap ;
+    flex-direction: row;
+    padding: 9px 13px;
+    gap: 3px;
+    font-size: 2px;
+    padding-top: 0px;
+ 
+ margin-left: 0px;
+    padding-left: 0px;
+    
+  width: 100%;
+  left: 0;
+
   }
   .im{
    display: grid;
@@ -398,21 +431,38 @@ margin-left: 72px;
      grid-template-columns: repeat(2, 1fr); /* 2 per row */
     
   }
+  .logoContainer{
+    padding: 0px;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+  }
   .p1{
     padding-left: 22px;
   }
-  
+ .logoText{
+  font-size: 18px;
+  padding-left: 10px;
+ }
   .links {
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 10px;
+  font-size: 14px;
+    justify-content:center;
+   
+  }
+  .linksLi{
+    font-weight: bolder;
+    color: rgb(140, 18, 40);
+    font-size: 8px;
   }
   .button3{
      padding-left: 0px;
  margin-top: 20px;
  margin-bottom: 20px;
- margin-left: 200px;
- margin-right: 200px;
+display: block;
+margin:20px auto;
   padding-right: 0px;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -426,8 +476,8 @@ line-height: 1.6;
 }
 .secondTitle{
   background-color: rgb(140, 18, 40);
-  margin-left: 180px;
-  margin-right: 180px;
+  width: fit-content;
+  margin: 20px auto;
   color: rgb(255, 255, 255);
   justify-content: center;
   text-align: center;
@@ -450,6 +500,13 @@ line-height: 1.6;
   height: 30vh;
   width: 100%;
   padding-left: 220px;
+}
+.links a {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
   .title {
     margin-top: 120px;  /* More space on mobile for stacked navbar */

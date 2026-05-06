@@ -25,10 +25,10 @@ export default function Home() {
           <li><Link href="/booking">Booking</Link></li>
           <li><Link href="/services">Services</Link></li>
           <li><Link href="/contact">Contact</Link></li>
-          
+      
           <li className={styles.linksLi}><Link href="/contact">BOOK NOW</Link></li>
-          
         </ul>
+          
       </nav>
       <h1 className={styles.title}>Reveal Your Natural</h1>
       <h1 className={styles.stitle}>Beauty</h1>
